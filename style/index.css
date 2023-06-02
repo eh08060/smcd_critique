@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui;
+  font-size: 1.125rem;
+}
+
+.wrapper {
+  margin-inline: auto;
+  max-width: 1600px;
+}
+
+main a {
+}
+
+main .btn::after {
+  content: "교수님";
+}
