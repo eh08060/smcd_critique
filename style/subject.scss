@@ -5,18 +5,30 @@
 @import "./theme.dark.css" (prefers-color-scheme: dark);
 @import "./theme.light.css" (prefers-color-scheme: light);
 
+iframe,
+img,
+picture,
+svg,
+video {
+  .fullWidth {
+    width: 100%;
+  }
+}
+
 header {
   .wrapper {
     display: flex;
     align-items: center;
-    justify-content: center;
+
+    // justify-content: center;
     min-height: 100dvh;
     padding: 4rem 2rem;
-    text-align: center;
+
+    // text-align: center;
   }
 }
 
-footer {
+nav {
   $bg: var(--bg-variant);
   $txt: var(--txt-variant);
 
@@ -27,9 +39,16 @@ footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    justify-items: stretch;
     width: fit-content;
-    min-height: 100dvh;
+    margin-inline: auto;
+    justify-items: stretch;
+    padding: 4rem 2rem;
     gap: 1.5rem;
+  }
+}
+
+footer {
+  .wrapper {
+    padding: 4rem 2rem;
   }
 }

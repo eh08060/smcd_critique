@@ -21,7 +21,31 @@ body {
 }
 
 a {
+  $link-txt: var(--txt-primary);
+  $link-visited-txt: var(--txt-tertiary);
+
+  color: $link-txt;
   text-decoration: none;
+
+  &:link {
+    color: $link-txt;
+  }
+
+  &:visited {
+    color: $link-visited-txt;
+  }
+
+  &:hover {
+    color: $link-txt;
+  }
+
+  &:focus {
+    color: $link-txt;
+  }
+
+  &:active {
+    color: $link-txt;
+  }
 }
 
 iframe,
