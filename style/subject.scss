@@ -1,11 +1,35 @@
 /* stylelint-disable selector-class-pattern */
 
 @use "base";
-@use "comps";
+@use "./component/btn";
 @import "./theme.dark.css" (prefers-color-scheme: dark);
 @import "./theme.light.css" (prefers-color-scheme: light);
 
-.wrapper--title {
-  padding: 4rem 2rem;
-  text-align: center;
+header {
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+}
+
+footer {
+  $bg: var(--bg-variant);
+  $txt: var(--txt-variant);
+
+  background-color: $bg;
+  color: $txt;
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: stretch;
+    width: fit-content;
+    min-height: 100dvh;
+    gap: 1.5rem;
+  }
 }

@@ -1,21 +1,28 @@
 /* stylelint-disable selector-class-pattern */
 
 @use "base";
-@use "comps";
+@use "./component/btn";
 @import "./theme.dark.css" (prefers-color-scheme: dark);
 @import "./theme.light.css" (prefers-color-scheme: light);
 
-.wrapper--title {
-  padding: 4rem 2rem;
-  text-align: center;
+header {
+  .wrapper {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
 }
 
-.wrapper--btn {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-}
+main {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: stretch;
+    width: fit-content;
+    gap: 1.5rem;
+  }
 
-main .subject::after {
-  content: "교수님";
+  .subject::after {
+    content: "교수님";
+  }
 }

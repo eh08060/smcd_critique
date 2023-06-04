@@ -1,9 +1,6 @@
 import { studentInfo } from "./studentInfo.js";
 
-document.title = `${studentInfo.성명} ${studentInfo.학번} ${studentInfo.평가연도
-  .toString()
-  .trim()
-  .substring(2)}년 ${studentInfo.평가회차}차`;
+document.title = `${studentInfo.성명} ${studentInfo.학번} ${studentInfo.평가회차}차`;
 
 const title = document.querySelector("#title");
 title.innerHTML = `커뮤니케이션디자인전공</br>${studentInfo.평가연도}년도 졸업작품 ${studentInfo.평가회차}차 평가</br>${studentInfo.성명} ${studentInfo.학번}`;

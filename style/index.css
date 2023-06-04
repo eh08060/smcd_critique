@@ -25,6 +25,7 @@ a {
   text-decoration: none;
 }
 
+iframe,
 img,
 picture,
 svg,
@@ -44,32 +45,87 @@ video {
   padding: 0.625rem 1.5rem;
   transition: background-color 150ms ease-out, box-shadow 150ms ease-out, color 150ms ease-out;
   border-radius: 0.5rem;
-  background-color: var(--btn-bg);
-  color: var(--btn-txt);
+  background-color: var(--btn-filled-bg);
+  color: var(--btn-filled-txt);
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.25rem;
   text-align: center;
 }
 .btn:hover {
-  background-color: var(--btn-bg-hover);
-  color: var(--btn-txt-hover);
+  background-color: var(--btn-filled-bg-hover);
+  color: var(--btn-filled-txt);
 }
 .btn:focus {
-  background-color: var(--btn-bg-focused);
-  color: var(--btn-txt-focused);
+  background-color: var(--btn-filled-bg-focused);
+  color: var(--btn-filled-txt);
 }
 .btn:active {
-  background-color: var(--btn-bg-pressed);
-  color: var(--btn-txt-pressed);
+  background-color: var(--btn-filled-bg-pressed);
+  color: var(--btn-filled-txt);
 }
 .btn.disabled {
-  background-color: var(--btn-bg-disabled);
-  color: var(--btn-txt-disabled);
+  background-color: var(--btn-filled-bg-disabled);
+  color: var(--btn-filled-txt-disabled);
+}
+.btn--width-stretch {
+  width: 100%;
+}
+.btn--type-tonal {
+  background-color: var(--btn-tonal-bg);
+  color: var(--btn-tonal-txt);
+}
+.btn--type-tonal:hover {
+  background-color: var(--btn-tonal-bg-hover);
+  color: var(--btn-tonal-txt);
+}
+.btn--type-tonal:focus {
+  background-color: var(--btn-tonal-bg-focused);
+  color: var(--btn-tonal-txt);
+}
+.btn--type-tonal:active {
+  background-color: var(--btn-tonal-bg-pressed);
+  color: var(--btn-tonal-txt);
+}
+.btn--type-tonal.disabled {
+  background-color: var(--btn-tonal-bg-disabled);
+  color: var(--btn-tonal-txt-disabled);
+}
+.btn--type-elevated {
+  background-color: var(--btn-elevated-bg);
+  color: var(--btn-elevated-txt);
+}
+.btn--type-elevated:hover {
+  background-color: var(--btn-elevated-bg-hover);
+  color: var(--btn-elevated-txt);
+}
+.btn--type-elevated:focus {
+  background-color: var(--btn-elevated-bg-focused);
+  color: var(--btn-elevated-txt);
+}
+.btn--type-elevated:active {
+  background-color: var(--btn-elevated-bg-pressed);
+  color: var(--btn-elevated-txt);
+}
+.btn--type-elevated.disabled {
+  background-color: var(--btn-elevated-bg-disabled);
+  color: var(--btn-elevated-txt-disabled);
 }
 
 @media (prefers-color-scheme: dark) {
   .btn:hover {
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  .btn--type-elevated {
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  .btn--type-elevated:hover {
+    box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  .btn--type-elevated:focus {
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  .btn--type-elevated:active {
     box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.3);
   }
 }
@@ -77,18 +133,33 @@ video {
   .btn:hover {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
   }
+  .btn--type-elevated {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
+  }
+  .btn--type-elevated:hover {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 2px 6px 2px rgba(0, 0, 0, 0.15);
+  }
+  .btn--type-elevated:focus {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
+  }
+  .btn--type-elevated:active {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
+  }
 }
-.wrapper--title {
+header .wrapper {
   padding: 4rem 2rem;
   text-align: center;
 }
 
-.wrapper--btn {
-  display: flex;
-  justify-content: center;
+main .wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: stretch;
+  width: -moz-fit-content;
+  width: fit-content;
   gap: 1.5rem;
 }
-
 main .subject::after {
   content: "교수님";
 }

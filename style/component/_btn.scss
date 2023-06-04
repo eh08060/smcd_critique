@@ -1,0 +1,167 @@
+.btn {
+  $transition-duration: 150ms;
+  $btn-bg: var(--btn-filled-bg);
+  $btn-bg-hover: var(--btn-filled-bg-hover);
+  $btn-bg-focused: var(--btn-filled-bg-focused);
+  $btn-bg-pressed: var(--btn-filled-bg-pressed);
+  $btn-bg-disabled: var(--btn-filled-bg-disabled);
+  $btn-txt: var(--btn-filled-txt);
+  $btn-txt-disabled: var(--btn-filled-txt-disabled);
+
+  width: fit-content;
+  padding: 0.625rem 1.5rem;
+  transition: background-color $transition-duration ease-out,
+    box-shadow $transition-duration ease-out,
+    color $transition-duration ease-out;
+  border-radius: 0.5rem;
+  background-color: $btn-bg;
+  color: $btn-txt;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  text-align: center;
+
+  &:hover {
+    background-color: $btn-bg-hover;
+    color: $btn-txt;
+  }
+
+  &:focus {
+    background-color: $btn-bg-focused;
+    color: $btn-txt;
+  }
+
+  &:active {
+    background-color: $btn-bg-pressed;
+    color: $btn-txt;
+  }
+
+  &.disabled {
+    background-color: $btn-bg-disabled;
+    color: $btn-txt-disabled;
+  }
+
+  &--width-stretch {
+    width: 100%;
+  }
+
+  &--type {
+    &-tonal {
+      $btn-bg: var(--btn-tonal-bg);
+      $btn-bg-hover: var(--btn-tonal-bg-hover);
+      $btn-bg-focused: var(--btn-tonal-bg-focused);
+      $btn-bg-pressed: var(--btn-tonal-bg-pressed);
+      $btn-bg-disabled: var(--btn-tonal-bg-disabled);
+      $btn-txt: var(--btn-tonal-txt);
+      $btn-txt-disabled: var(--btn-tonal-txt-disabled);
+
+      background-color: $btn-bg;
+      color: $btn-txt;
+
+      &:hover {
+        background-color: $btn-bg-hover;
+        color: $btn-txt;
+      }
+
+      &:focus {
+        background-color: $btn-bg-focused;
+        color: $btn-txt;
+      }
+
+      &:active {
+        background-color: $btn-bg-pressed;
+        color: $btn-txt;
+      }
+
+      &.disabled {
+        background-color: $btn-bg-disabled;
+        color: $btn-txt-disabled;
+      }
+    }
+
+    &-elevated {
+      $btn-bg: var(--btn-elevated-bg);
+      $btn-bg-hover: var(--btn-elevated-bg-hover);
+      $btn-bg-focused: var(--btn-elevated-bg-focused);
+      $btn-bg-pressed: var(--btn-elevated-bg-pressed);
+      $btn-bg-disabled: var(--btn-elevated-bg-disabled);
+      $btn-txt: var(--btn-elevated-txt);
+      $btn-txt-disabled: var(--btn-elevated-txt-disabled);
+
+      background-color: $btn-bg;
+      color: $btn-txt;
+
+      &:hover {
+        background-color: $btn-bg-hover;
+        color: $btn-txt;
+      }
+
+      &:focus {
+        background-color: $btn-bg-focused;
+        color: $btn-txt;
+      }
+
+      &:active {
+        background-color: $btn-bg-pressed;
+        color: $btn-txt;
+      }
+
+      &.disabled {
+        background-color: $btn-bg-disabled;
+        color: $btn-txt-disabled;
+      }
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .btn {
+    &:hover {
+      box-shadow: 0 1px 3px 1px rgb(0 0 0 / 15%), 0 1px 2px rgb(0 0 0 / 30%);
+    }
+
+    &--type {
+      &-elevated {
+        box-shadow: 0 1px 3px 1px rgb(0 0 0 / 15%), 0 1px 2px rgb(0 0 0 / 30%);
+
+        &:hover {
+          box-shadow: 0 2px 6px 2px rgb(0 0 0 / 15%), 0 1px 2px rgb(0 0 0 / 30%);
+        }
+
+        &:focus {
+          box-shadow: 0 1px 3px 1px rgb(0 0 0 / 15%), 0 1px 2px rgb(0 0 0 / 30%);
+        }
+
+        &:active {
+          box-shadow: 0 1px 3px 1px rgb(0 0 0 / 15%), 0 1px 2px rgb(0 0 0 / 30%);
+        }
+      }
+    }
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .btn {
+    &:hover {
+      box-shadow: 0 1px 2px rgb(0 0 0 / 30%), 0 1px 3px 1px rgb(0 0 0 / 15%);
+    }
+
+    &--type {
+      &-elevated {
+        box-shadow: 0 1px 2px rgb(0 0 0 / 30%), 0 1px 3px 1px rgb(0 0 0 / 15%);
+
+        &:hover {
+          box-shadow: 0 1px 2px rgb(0 0 0 / 30%), 0 2px 6px 2px rgb(0 0 0 / 15%);
+        }
+
+        &:focus {
+          box-shadow: 0 1px 2px rgb(0 0 0 / 30%), 0 1px 3px 1px rgb(0 0 0 / 15%);
+        }
+
+        &:active {
+          box-shadow: 0 1px 2px rgb(0 0 0 / 30%), 0 1px 3px 1px rgb(0 0 0 / 15%);
+        }
+      }
+    }
+  }
+}
