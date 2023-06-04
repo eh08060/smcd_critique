@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  $bg: var(--bg);
+  $txt: var(--txt);
+
+  margin: 0;
+  background: $bg;
+  color: $txt;
+  font-family: system-ui;
+  font-size: 1.125rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+.wrapper {
+  max-width: 87.5rem;
+  margin-inline: auto;
+}

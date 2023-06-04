@@ -1,0 +1,11 @@
+/* stylelint-disable selector-class-pattern */
+
+@use "base";
+@use "comps";
+@import "./theme.dark.css" (prefers-color-scheme: dark);
+@import "./theme.light.css" (prefers-color-scheme: light);
+
+.wrapper--title {
+  padding: 4rem 2rem;
+  text-align: center;
+}

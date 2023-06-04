@@ -1,0 +1,14 @@
+:root {
+  --bg: #fcfcfc;
+  --txt: #1b1b1b;
+  --btn-bg: #4756b2;
+  --btn-bg-hover: #5563b8;
+  --btn-bg-focused: #5d6bbb;
+  --btn-bg-pressed: #5d6bbb;
+  --btn-bg-disabled: #949494;
+  --btn-txt: #ffffff;
+  --btn-txt-hover: #ffffff;
+  --btn-txt-focused: #ffffff;
+  --btn-txt-pressed: #ffffff;
+  --btn-txt-disabled: #dedede;
+}
