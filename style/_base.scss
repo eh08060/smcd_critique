@@ -1,3 +1,7 @@
+:root {
+  --max-width: 90rem;
+}
+
 *,
 *::before,
 *::after {
@@ -59,6 +63,7 @@ video {
 }
 
 .wrapper {
-  max-width: 87.5rem;
+  max-width: var(--max-width);
   margin-inline: auto;
+  padding: 3rem 1.5rem;
 }
