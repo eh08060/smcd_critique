@@ -1,6 +1,6 @@
 const reference = [
   {
-    author: "",
+    author: "lena polishko",
     title: "",
     year: "",
     sourceTitle: "",
