@@ -78,6 +78,14 @@ main {
   }
 }
 
+footer {
+  ol {
+    li {
+      text-transform: capitalize;
+    }
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   main {
     .shaddowWrap {
