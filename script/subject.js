@@ -33,3 +33,35 @@ innerLinks.forEach((eachInnerLink) => {
     });
   });
 });
+
+let wrapper;
+let ol;
+reference.forEach((eachRef) => {
+  if (eachRef.author || eachRef.title || eachRef.link) {
+    if (!wrapper) {
+      wrapper = document.createElement("div");
+      wrapper.classList.add("wrapper");
+      ol = document.createElement("ol");
+    }
+    const a = document.createElement("a");
+    a.href = eachRef.link;
+    a.innerHTML = `<li>
+      ${eachRef.author ? `${eachRef.author} ` : `작자 미상 `}(${
+      eachRef.year ? eachRef.year : `연도 미상`
+    }),
+          <em>${eachRef.title ? eachRef.title : `제목 미상`}.</em> ${
+      eachRef.sourceTitle ? eachRef.sourceTitle : ``
+    }
+      </li>`;
+    ol.append(a);
+  }
+});
+if (wrapper) {
+  wrapper.prepend(ol);
+  const h2 = document.createElement("h2");
+  h2.innerHTML = "References";
+  wrapper.prepend(h2);
+  const footer = document.createElement("footer");
+  footer.prepend(wrapper);
+  document.querySelector("nav").after(footer);
+}
