@@ -105,6 +105,14 @@ footer {
 }
 
 @media (width <37.5rem) {
+  body {
+    font-size: 16px;
+  }
+
+  .wrapper {
+    padding-inline: 1rem;
+  }
+
   nav {
     .wrapper {
       grid-template-columns: 1fr;

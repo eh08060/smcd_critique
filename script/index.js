@@ -12,3 +12,6 @@ profBtns.forEach((eachProf, idx) => {
   const propName = `지도교수${idx + 1}`;
   eachProf.innerHTML = `${studentInfo[propName]}교수님`;
 });
+
+const studentListBtn = document.querySelector("#studentList");
+studentListBtn.href = "https://spctrm404.github.io/smcd_dsc_2023_1";
